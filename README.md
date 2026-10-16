@@ -41,4 +41,4 @@ To put it online for free, turn on **GitHub Pages** (Settings → Pages → depl
 - The starter check-in goals (`DEFAULT_GOALS`) and the October reading plan (`READINGS`) are at the top of `app.js`.
 - Sign-in and syncing live in `account.js`, and the Firebase settings go in `firebase-config.js`.
 
-Made for fun by students in a college ministry. Not an official Cornerstone Church resource. Scripture quotations are from the ESV® Bible.
+Made for fun by students in a college ministry. Not an official Cornerstone Church resource. Scripture quotations are from the ESV® Bible (The Holy Bible, English Standard Version®), © 2001 by Crossway, a publishing ministry of Good News Publishers. Used by permission. All rights reserved.

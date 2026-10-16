@@ -261,8 +261,14 @@
       document.getElementById("stat-streak").textContent = s.streak;
       document.getElementById("stat-best").textContent = s.best;
       document.getElementById("stat-checks").textContent = s.checks;
+      // hero countdown: today counts as a day left; after October it points to the recap
       var left = document.getElementById("days-left");
-      if (left) left.textContent = String(Math.max(0, DAYS - TODAY));
+      var leftCap = document.getElementById("days-left-cap");
+      if (left && leftCap) {
+        var remaining = DAYS - TODAY + 1;
+        if (OVER) { left.textContent = "31"; leftCap.textContent = "days of Locktober are done. See your recap below."; }
+        else { left.textContent = String(remaining); leftCap.textContent = remaining === 1 ? "Last day. Finish strong." : "days left to stay locked in"; }
+      }
 
       var r = readingFor(selected);
       var box = document.getElementById("today-reading");
