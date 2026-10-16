@@ -49,17 +49,17 @@
   // ---------- storage ----------
   var STORE = "locktober-v1";
   var DEFAULT_GOALS = [
-    { id: "sleep-hours", pillar: "physical", label: "7–9 hours of sleep" },
-    { id: "sweat-train", pillar: "physical", label: "Work out" },
-    { id: "snack-whole", pillar: "physical", label: "Mostly whole foods" },
-    { id: "sun-rise-set", pillar: "physical", label: "Catch the sunrise or sunset" },
-    { id: "thought-noshort", pillar: "mental", label: "No short-form content" },
+    { id: "sleep-bedtime", pillar: "physical", label: "Consistent bedtime" },
+    { id: "sweat-30", pillar: "physical", label: "30 minutes of exercise" },
+    { id: "snack-produce", pillar: "physical", label: "Fruit or veggie at every meal" },
+    { id: "sun-outside", pillar: "physical", label: "Get outside" },
+    { id: "thought-limit", pillar: "mental", label: "Screen-time limit" },
+    { id: "task-plan", pillar: "mental", label: "Plan tomorrow tonight" },
+    { id: "beauty-gratitude", pillar: "emotional", label: "Write down one good thing" },
+    { id: "belong-meal", pillar: "emotional", label: "Share a meal with someone" },
     { id: "morning-routine", pillar: "spiritual", label: "Morning routine" },
-    { id: "task-analog", pillar: "mental", label: "Paper & analog planning" },
-    { id: "beauty-walk", pillar: "emotional", label: "Take a walk" },
-    { id: "belong-people", pillar: "emotional", label: "Real time with my people" },
-    { id: "purpose-obey", pillar: "spiritual", label: "Daily obedience" },
-    { id: "peace-closet", pillar: "spiritual", label: "Prayer closet before my phone" }
+    { id: "purpose-pray-others", pillar: "spiritual", label: "Pray for someone by name" },
+    { id: "peace-bible", pillar: "spiritual", label: "Read today’s Bible passage" }
   ];
 
   function load() {
@@ -74,16 +74,38 @@
       }
     } catch (e) { /* storage blocked: fall through to defaults */ }
     // newcomers start today, so the days before they joined don't count against them
-    return { goals: DEFAULT_GOALS.slice(), log: {}, start: TODAY, welcomed: false };
+    return freshState();
   }
   function firstLogged(log) {
     var days = Object.keys(log).filter(function (k) { return log[k].length; }).map(function (k) { return Number(k.slice(-2)); });
     return days.length ? Math.min.apply(null, days) : 0;
   }
   var state = load();
-  function save() {
+  var renderers = [];
+  function saveLocal() {
     try { localStorage.setItem(STORE, JSON.stringify(state)); } catch (e) { /* not saved */ }
   }
+  function save() {
+    saveLocal();
+    if (window.Locktober.onSave) window.Locktober.onSave(state);
+  }
+  function freshState() {
+    return { goals: DEFAULT_GOALS.slice(), log: {}, start: TODAY, welcomed: false };
+  }
+
+  // Hooks for account.js, which syncs this state to the signed-in person's account.
+  window.Locktober = {
+    today: TODAY,
+    getState: function () { return state; },
+    freshState: freshState,
+    setState: function (next) {
+      state = next && Array.isArray(next.goals) && next.log ? next : freshState();
+      if (!state.start) state.start = firstLogged(state.log) || TODAY;
+      saveLocal();
+      renderers.forEach(function (fn) { fn(); });
+    },
+    onSave: null
+  };
   function hasGoal(id) {
     return state.goals.some(function (g) { return g.id === id; });
   }
@@ -112,6 +134,7 @@
       sync();
     });
     sync();
+    renderers.push(sync);
   });
 
   // ---------- daily check-in (home) ----------
@@ -416,7 +439,12 @@
       if (dialog.close) dialog.close(); else dialog.removeAttribute("open");
     });
 
-    if (!state.welcomed) save(); // remember a newcomer's start day
+    renderers.push(function () {
+      startSel.value = String(Math.min(state.start, TODAY));
+      if (selected < state.start) selected = state.start;
+      render();
+    });
+    if (!state.welcomed) saveLocal(); // remember a newcomer's start day
     render();
   }
 

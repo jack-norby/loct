@@ -24,6 +24,7 @@
       <svg viewBox="0 0 34 34" aria-hidden="true"><path d="M10 15V10a7 7 0 0 1 14 0v5" fill="none" stroke="#d65c45" stroke-width="3.5"/><rect x="5" y="14" width="24" height="18" fill="#4a1714"/><rect x="15.5" y="19" width="3" height="7" fill="#ffffff"/></svg>
       <span>Locktober<br>2026</span>
     </a>
+    <button class="nav-account" type="button" id="account-btn" hidden>Sign in</button>
     <a class="nav-cta" href="index.html#checkin">Check in</a>
     <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false"><svg viewBox="0 0 28 28" aria-hidden="true"><path d="M4 8h20M4 14h20M4 20h20" stroke="currentColor" stroke-width="2.5"/></svg></button>
     <ul class="nav-links">
@@ -146,12 +147,12 @@
     <div class="routine__head">
       <p class="label" style="color:var(--coral)">Before your first class</p>
       <h2>The Morning Routine.</h2>
-      <p>The same order every day, so you don’t have to think about it. This one works for most people. Make it yours, but keep God before your phone.</p>
+      <p>The same order every day, so you don’t have to think about it. Here’s a simple one to start from. Make it yours.</p>
     </div>
     <ol class="routine__steps">
       <li><b>Wake up</b><span>Same time every day. Feet on the floor before you check anything.</span></li>
       <li><b>Water</b><span>A full glass before the coffee.</span></li>
-      <li><b>Time with God</b><span>Today’s Bible reading and prayer, before your phone. The reading is below.</span></li>
+      <li><b>Time with God</b><span>Today’s Bible reading and a few minutes of prayer. The reading is below.</span></li>
       <li><b>Move</b><span>Shower, stretch or take a quick walk outside for morning light.</span></li>
       <li><b>Breakfast</b><span>Protein and real food. Don’t skip it.</span></li>
       <li><b>Plan the day</b><span>Write your top three tasks on paper. Then head out.</span></li>
@@ -167,7 +168,8 @@
     <div class="checkin__head">
       <p class="label" style="color:var(--coral)">Daily check-in</p>
       <h2>Did you stay locked in today?</h2>
-      <p>Check off what you did. Your goals and check-ins are saved on this device only, so nobody else can see them.</p>
+      <p>Check off what you did. Nobody else can see your goals or check-ins.</p>
+      <p class="sync-note" id="sync-note">Saved on this device only.</p>
       <div class="recap" id="recap" hidden>
         <p class="label">Locktober is done</p>
         <h3>Here’s your Locktober.</h3>
@@ -294,12 +296,12 @@
       <span class="shape shape--petals" style="width:420px;height:420px;left:-170px;top:-150px;--shape-color:var(--sage);opacity:.85" aria-hidden="true"></span>
       <h2>Lock-In Partner</h2>
       <p class="sub">“Two are better than one… For if they fall, one will lift up his fellow.” Ecclesiastes 4:9–10</p>
-      <p>Find one friend, roommate or your dgroup and go through these once a week.</p>
+      <p>Find a friend, a roommate or your small group and go through these once a week.</p>
       <ol class="qs">
         <li><b>Physical</b><span>Did you sleep, move, eat and get outside the way you planned?</span></li>
         <li><b>Mental</b><span>Where did your attention go? Did you create more than you consumed?</span></li>
         <li><b>Emotional</b><span>What beauty did you notice? Who did you spend real time with?</span></li>
-        <li><b>Spiritual</b><span>Did you meet with God before your phone? Did you take a sabbath?</span></li>
+        <li><b>Spiritual</b><span>How was your time with God this week? Where did you see him at work?</span></li>
         <li><b>Into the light</b><span>What sin or temptation do you need to bring into the light?</span></li>
         <li><b>Integrity check</b><span>Have you been completely honest?</span></li>
       </ol>
@@ -358,5 +360,7 @@
 </footer>
 
 <script src="app.js"></script>
+<script src="firebase-config.js"></script>
+<script src="account.js"></script>
 </body>
 </html>

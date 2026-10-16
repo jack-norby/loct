@@ -24,6 +24,7 @@
       <svg viewBox="0 0 34 34" aria-hidden="true"><path d="M10 15V10a7 7 0 0 1 14 0v5" fill="none" stroke="#d65c45" stroke-width="3.5"/><rect x="5" y="14" width="24" height="18" fill="#4a1714"/><rect x="15.5" y="19" width="3" height="7" fill="#ffffff"/></svg>
       <span>Locktober<br>2026</span>
     </a>
+    <button class="nav-account" type="button" id="account-btn" hidden>Sign in</button>
     <a class="nav-cta" href="index.html#checkin">Check in</a>
     <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false"><svg viewBox="0 0 28 28" aria-hidden="true"><path d="M4 8h20M4 14h20M4 20h20" stroke="currentColor" stroke-width="2.5"/></svg></button>
     <ul class="nav-links">
@@ -71,41 +72,41 @@
   <section class="split" id="sleep">
     <div class="split__text t-maroon">
       <h2>Sleep</h2>
-      <p class="sub">Guard your 7–9.</p>
+      <p class="sub">Protect your nights.</p>
       <p>Sleep is the first rest God built into every single day. Protect it like it matters, because it does.</p>
       <div class="plan-card">
         <div class="lockin-item">
-          <h3>7–9 hours a night</h3>
-          <p>Not less than 7. Not more than 9.</p>
-          <button class="add" type="button" data-goal="sleep-hours" data-pillar="physical" data-label="7–9 hours of sleep">+ Add to my check-in</button>
+          <h3>Consistent bedtime</h3>
+          <p>Pick a bedtime that works with your schedule and keep it most nights.</p>
+          <button class="add" type="button" data-goal="sleep-bedtime" data-pillar="physical" data-label="Consistent bedtime">+ Add to my check-in</button>
         </div>
         <div class="lockin-item">
-          <h3>Same wake-up, every day</h3>
-          <p>Pick a time and keep it, weekends included. Your body loves a rhythm.</p>
-          <button class="add" type="button" data-goal="sleep-wake" data-pillar="physical" data-label="Same wake-up time daily">+ Add to my check-in</button>
+          <h3>A full night’s sleep</h3>
+          <p>Most adults need at least 7 hours. Count backwards from your first alarm.</p>
+          <button class="add" type="button" data-goal="sleep-full" data-pillar="physical" data-label="Get a full night’s sleep">+ Add to my check-in</button>
         </div>
         <div class="lockin-item">
-          <h3>Screens off before bed</h3>
-          <p>The last 30 minutes of the day are phone-free. Read, pray or talk instead.</p>
-          <button class="add" type="button" data-goal="sleep-screens" data-pillar="physical" data-label="Screens off 30 min before bed">+ Add to my check-in</button>
+          <h3>Caffeine cutoff</h3>
+          <p>No coffee or energy drinks after early afternoon.</p>
+          <button class="add" type="button" data-goal="sleep-caffeine" data-pillar="physical" data-label="No caffeine after 2pm">+ Add to my check-in</button>
         </div>
         <div class="lockin-item">
-          <h3>Set up the cave</h3>
-          <p>Blackout curtains or a sleep mask, a cool room, and earplugs if your roommate snores.</p>
-          <button class="add" type="button" data-goal="sleep-cave" data-pillar="physical" data-label="Dark, cool, quiet room">+ Add to my check-in</button>
+          <h3>Wind-down routine</h3>
+          <p>The same few steps every night: lights low, phone away, something calm.</p>
+          <button class="add" type="button" data-goal="sleep-winddown" data-pillar="physical" data-label="Wind-down routine">+ Add to my check-in</button>
         </div>
       </div>
       <p class="label">Pro tips</p>
       <div class="tips">
-        <div class="tip"><h3>Count backwards.</h3><p>Need to be up at 7? Lights out by 11 at the latest. Set a bedtime alarm, not just a wake-up one.</p></div>
+        <div class="tip"><h3>Set a bedtime alarm.</h3><p>Everyone sets a wake-up alarm. An alarm that tells you to start winding down works just as well.</p></div>
         <div class="tip"><h3>Phone sleeps elsewhere.</h3><p>Charge it across the room. Get an actual alarm clock if you have to.</p></div>
       </div>
       <div class="verse"><q>It is in vain that you rise up early and go late to rest, eating the bread of anxious toil; for he gives to his beloved sleep.</q><cite>Psalm 127:2</cite></div>
     </div>
     <div class="split__art t-coral">
       <span class="shape shape--star8" style="width:120%;height:120%;--shape-color:#c94e38" aria-hidden="true"></span>
-      <div class="stat">7–9</div>
-      <p class="stat-cap">hours a night, with the same wake-up every day</p>
+      <div class="stat">7<small>+</small></div>
+      <p class="stat-cap">hours a night is what most adults need (CDC)</p>
     </div>
   </section>
 
@@ -117,24 +118,24 @@
       <p>Your body has two enemies here: atrophy, from not moving at all, and injury, from doing too much too fast. Aim for steady, not heroic. Pick a plan you can actually keep for 31 days.</p>
       <div class="plan-card">
         <div class="lockin-item">
-          <h3>Train 3–5× a week</h3>
-          <p>Lift, run, play a sport or take a class. Pick what you’ll actually show up for.</p>
-          <button class="add" type="button" data-goal="sweat-train" data-pillar="physical" data-label="Work out">+ Add to my check-in</button>
+          <h3>30 minutes, most days</h3>
+          <p>Anything that gets your heart rate up: a run, a lift, a pickup game or a class.</p>
+          <button class="add" type="button" data-goal="sweat-30" data-pillar="physical" data-label="30 minutes of exercise">+ Add to my check-in</button>
         </div>
         <div class="lockin-item">
-          <h3>Move every day</h3>
-          <p>On non-workout days, walk. Around 7,000 steps a day is a solid target.</p>
-          <button class="add" type="button" data-goal="sweat-move" data-pillar="physical" data-label="Move every day">+ Add to my check-in</button>
+          <h3>Get stronger</h3>
+          <p>Two days a week of strength work. Bodyweight counts.</p>
+          <button class="add" type="button" data-goal="sweat-strength" data-pillar="physical" data-label="Strength training">+ Add to my check-in</button>
         </div>
         <div class="lockin-item">
-          <h3>Warm up and stretch</h3>
-          <p>Ten minutes before and after keeps you training instead of injured.</p>
-          <button class="add" type="button" data-goal="sweat-warmup" data-pillar="physical" data-label="Warm up &amp; stretch">+ Add to my check-in</button>
+          <h3>Try something new</h3>
+          <p>An intramural, a climbing gym, a dance class or a hike with friends.</p>
+          <button class="add" type="button" data-goal="sweat-new" data-pillar="physical" data-label="Try something new">+ Add to my check-in</button>
         </div>
         <div class="lockin-item">
-          <h3>One full rest day</h3>
-          <p>Take a real day off each week. Recovery is part of training.</p>
-          <button class="add" type="button" data-goal="sweat-rest" data-pillar="physical" data-label="Weekly rest day">+ Add to my check-in</button>
+          <h3>Take the long way</h3>
+          <p>Stairs over elevators, walk or bike instead of driving across campus.</p>
+          <button class="add" type="button" data-goal="sweat-stairs" data-pillar="physical" data-label="Take the long way">+ Add to my check-in</button>
         </div>
       </div>
       <p class="label">Pro tips</p>
@@ -161,29 +162,29 @@
       <p>Sugar gives you a spike and then drops you on the floor right before your 2pm class. Whole foods keep the line flat and steady. Got allergies or a specific diet? Swap in your own goals on the home page.</p>
       <div class="plan-card">
         <div class="lockin-item">
-          <h3>Mostly whole foods</h3>
-          <p>Food that looks like it came from a farm, not a factory. Less added sugar.</p>
-          <button class="add" type="button" data-goal="snack-whole" data-pillar="physical" data-label="Mostly whole foods">+ Add to my check-in</button>
+          <h3>Eat a real breakfast</h3>
+          <p>Something with protein before your first class.</p>
+          <button class="add" type="button" data-goal="snack-breakfast" data-pillar="physical" data-label="Eat a real breakfast">+ Add to my check-in</button>
         </div>
         <div class="lockin-item">
-          <h3>Snack smart</h3>
-          <p>Nuts, fruit, jerky, yogurt or cheese. Protein and fiber keep you steady.</p>
-          <button class="add" type="button" data-goal="snack-smart" data-pillar="physical" data-label="Snack smart">+ Add to my check-in</button>
+          <h3>Fruit or veggie at every meal</h3>
+          <p>Add one to every plate. That’s it.</p>
+          <button class="add" type="button" data-goal="snack-produce" data-pillar="physical" data-label="Fruit or veggie at every meal">+ Add to my check-in</button>
         </div>
         <div class="lockin-item">
-          <h3>Water bottle, all day</h3>
-          <p>Refill it between classes. Aim for pale yellow, not dark.</p>
-          <button class="add" type="button" data-goal="snack-water" data-pillar="physical" data-label="Water bottle, all day">+ Add to my check-in</button>
+          <h3>Drink enough water</h3>
+          <p>Carry a bottle and refill it between classes.</p>
+          <button class="add" type="button" data-goal="snack-water" data-pillar="physical" data-label="Drink enough water">+ Add to my check-in</button>
         </div>
         <div class="lockin-item">
-          <h3>Skip fast food</h3>
-          <p>Cook, hit the dining hall or pack something from home.</p>
-          <button class="add" type="button" data-goal="snack-fastfood" data-pillar="physical" data-label="Skip fast food">+ Add to my check-in</button>
+          <h3>Cut sugary drinks</h3>
+          <p>Swap soda and energy drinks for water, tea or black coffee.</p>
+          <button class="add" type="button" data-goal="snack-sugar" data-pillar="physical" data-label="Cut sugary drinks">+ Add to my check-in</button>
         </div>
       </div>
       <p class="label">Pro tips</p>
       <div class="tips">
-        <div class="tip"><h3>Pack it the night before.</h3><p>Decide when you’re full, not when you’re starving in line at the C-store.</p></div>
+        <div class="tip"><h3>Plan ahead.</h3><p>Decide what you’ll eat when you’re full, not when you’re starving between classes.</p></div>
         <div class="tip"><h3>Drink water first.</h3><p>Half the time “hungry” is actually “thirsty.” Carry a bottle.</p></div>
       </div>
       <div class="verse"><q>So, whether you eat or drink, or whatever you do, do all to the glory of God.</q><cite>1 Corinthians 10:31</cite></div>
@@ -210,28 +211,28 @@
     <div class="split__text t-coral">
       <h2>Sunlight</h2>
       <p class="sub">Bookend the day outside.</p>
-      <p>Morning light tells your body it’s time to be awake, and that helps you fall asleep at night. Watching a sunrise or sunset also reminds you who made the sky.</p>
+      <p>Morning light tells your body it’s time to be awake, and that helps you fall asleep at night. Time outside also reminds you who made the sky.</p>
       <div class="plan-card">
         <div class="lockin-item">
-          <h3>Watch the sunrise &amp; sunset</h3>
-          <p>Catch at least one of them every day.</p>
-          <button class="add" type="button" data-goal="sun-rise-set" data-pillar="physical" data-label="Catch the sunrise or sunset">+ Add to my check-in</button>
+          <h3>Get outside every day</h3>
+          <p>At least 20 minutes outdoors, whatever the weather.</p>
+          <button class="add" type="button" data-goal="sun-outside" data-pillar="physical" data-label="Get outside">+ Add to my check-in</button>
         </div>
         <div class="lockin-item">
           <h3>Morning light</h3>
-          <p>Ten minutes outside within half an hour of waking up, even if it’s cloudy.</p>
-          <button class="add" type="button" data-goal="sun-morning" data-pillar="physical" data-label="Morning light, 10 min">+ Add to my check-in</button>
+          <p>A few minutes of daylight soon after you wake up, even if it’s cloudy.</p>
+          <button class="add" type="button" data-goal="sun-morning" data-pillar="physical" data-label="Morning light">+ Add to my check-in</button>
         </div>
         <div class="lockin-item">
-          <h3>Walk outside</h3>
-          <p>Take the long way to class. Leave the earbuds out sometimes.</p>
-          <button class="add" type="button" data-goal="sun-walk" data-pillar="physical" data-label="Walk outside">+ Add to my check-in</button>
+          <h3>Take it outside</h3>
+          <p>Study, read or eat lunch outside while October still allows it.</p>
+          <button class="add" type="button" data-goal="sun-study" data-pillar="physical" data-label="Study or eat outside">+ Add to my check-in</button>
         </div>
       </div>
       <p class="label">Pro tips</p>
       <div class="tips">
         <div class="tip"><h3>Bundle up.</h3><p>October mornings get cold. Grab a hoodie and a coffee and go anyway.</p></div>
-        <div class="tip"><h3>Make it a hangout.</h3><p>Sunset on a roof or a field with your roommates counts for Belonging too.</p></div>
+        <div class="tip"><h3>Make it a hangout.</h3><p>A walk or a picnic with friends counts for Belonging too.</p></div>
       </div>
       <div class="verse"><q>The steadfast love of the LORD never ceases; his mercies never come to an end; they are new every morning; great is your faithfulness.</q><cite>Lamentations 3:22–23</cite></div>
     </div>
@@ -274,5 +275,7 @@
 </footer>
 
 <script src="app.js"></script>
+<script src="firebase-config.js"></script>
+<script src="account.js"></script>
 </body>
 </html>

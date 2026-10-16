@@ -24,6 +24,7 @@
       <svg viewBox="0 0 34 34" aria-hidden="true"><path d="M10 15V10a7 7 0 0 1 14 0v5" fill="none" stroke="#d65c45" stroke-width="3.5"/><rect x="5" y="14" width="24" height="18" fill="#4a1714"/><rect x="15.5" y="19" width="3" height="7" fill="#ffffff"/></svg>
       <span>Locktober<br>2026</span>
     </a>
+    <button class="nav-account" type="button" id="account-btn" hidden>Sign in</button>
     <a class="nav-cta" href="index.html#checkin">Check in</a>
     <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false"><svg viewBox="0 0 28 28" aria-hidden="true"><path d="M4 8h20M4 14h20M4 20h20" stroke="currentColor" stroke-width="2.5"/></svg></button>
     <ul class="nav-links">
@@ -52,8 +53,8 @@
     </div>
     <div class="split__art t-cream">
       <span class="shape shape--star8" style="width:130%;height:130%;--shape-color:rgba(214,92,69,.22)" aria-hidden="true"></span>
-      <div class="stat" style="color:var(--maroon)">0</div>
-      <p class="stat-cap">minutes of short-form content</p>
+      <div class="stat" style="color:var(--maroon)">31<small>hrs</small></div>
+      <p class="stat-cap">back this month if you cut one hour of screen time a day</p>
     </div>
   </section>
 
@@ -69,40 +70,40 @@
   <section class="split" id="thought">
     <div class="split__text t-cream">
       <h2>Thought</h2>
-      <p class="sub">Create more than you consume.</p>
-      <p>When you’re tired, your brain reaches for the easiest hit, and that’s usually a feed. Locktober flips it. When you feel like scrolling, make something instead.</p>
+      <p class="sub">Guard what goes in.</p>
+      <p>Whatever you feed your mind shapes what you think about when nobody’s watching. Be picky about what gets in.</p>
       <div class="plan-card">
         <div class="lockin-item">
-          <h3>Tired? Create.</h3>
-          <p>When you want to consume media, write, draw, play guitar or cook something.</p>
-          <button class="add" type="button" data-goal="thought-create" data-pillar="mental" data-label="Create instead of scroll">+ Add to my check-in</button>
+          <h3>Set a screen-time limit</h3>
+          <p>Pick a daily limit for social apps and let your phone enforce it.</p>
+          <button class="add" type="button" data-goal="thought-limit" data-pillar="mental" data-label="Screen-time limit">+ Add to my check-in</button>
         </div>
         <div class="lockin-item">
-          <h3>No short-form content</h3>
-          <p>No Reels, TikTok or Shorts for the whole month.</p>
-          <button class="add" type="button" data-goal="thought-noshort" data-pillar="mental" data-label="No short-form content">+ Add to my check-in</button>
+          <h3>Journal for 5 minutes</h3>
+          <p>What happened, what you’re thinking about, what you’re thankful for.</p>
+          <button class="add" type="button" data-goal="thought-journal" data-pillar="mental" data-label="Journal 5 minutes">+ Add to my check-in</button>
         </div>
         <div class="lockin-item">
-          <h3>Read every day</h3>
-          <p>A fun book, not for class. Even 5–10 pages counts.</p>
-          <button class="add" type="button" data-goal="thought-read" data-pillar="mental" data-label="Read a few pages">+ Add to my check-in</button>
+          <h3>Learn something for fun</h3>
+          <p>A podcast, a documentary or a new skill. Something you chose.</p>
+          <button class="add" type="button" data-goal="thought-learn" data-pillar="mental" data-label="Learn something new">+ Add to my check-in</button>
         </div>
         <div class="lockin-item">
-          <h3>What do I actually enjoy?</h3>
-          <p>Write down what you love doing and thinking about. Do more of it.</p>
-          <button class="add" type="button" data-goal="thought-enjoy" data-pillar="mental" data-label="Journal: what do I enjoy?">+ Add to my check-in</button>
+          <h3>Fill the quiet moments</h3>
+          <p>Waiting in line or walking to class? Try a sermon, a Scripture app or worship instead of a feed.</p>
+          <button class="add" type="button" data-goal="thought-truth" data-pillar="mental" data-label="Fill quiet moments with truth">+ Add to my check-in</button>
         </div>
       </div>
       <p class="label">Pro tips</p>
       <div class="tips">
         <div class="tip"><h3>Delete, don’t hide.</h3><p>Take the apps off your phone for October. You can reinstall them November 1st if you still want them.</p></div>
-        <div class="tip"><h3>Keep a “make” list.</h3><p>Write five things you could create in 15 minutes. Pull from it when the urge hits.</p></div>
+        <div class="tip"><h3>Try grayscale.</h3><p>Turn your phone’s screen gray. Apps are a lot less tempting without the color.</p></div>
       </div>
       <div class="verse"><q>Finally, brothers, whatever is true, whatever is honorable, whatever is just, whatever is pure, whatever is lovely, whatever is commendable, if there is any excellence, if there is anything worthy of praise, think about these things.</q><cite>Philippians 4:8</cite></div>
     </div>
     <div class="split__art t-maroon">
       <span class="shape shape--burst" style="width:140%;height:140%;--shape-color:var(--maroon-2)" aria-hidden="true"></span>
-      <p class="sub" style="color:var(--white);font-size:clamp(2.4rem,5vw,4rem)">Create &gt; Consume</p>
+      <p class="sub" style="color:var(--white);font-size:clamp(2.4rem,5vw,4rem)">Guard your input.</p>
       <p class="stat-cap" style="color:var(--coral)">Your mind is being trained every day by</p>
       <div class="chips" style="justify-content:center;max-width:440px">
         <span>What you watch.</span><span>What you scroll.</span><span>What you listen to.</span><span>What you reach for when you’re tired.</span>
@@ -115,37 +116,32 @@
     <div class="split__text t-maroon">
       <h2>Task</h2>
       <p class="sub">Make your tools work for you.</p>
-      <p>Texts, the calendar and homework time all compete for the same brain. Go analog where you can, block what distracts you and work in timed chunks.</p>
+      <p>Classes, work, friends and church all want a piece of your week. A little planning keeps the important things from getting buried.</p>
       <div class="plan-card">
         <div class="lockin-item">
-          <h3>Paper &amp; analog everything</h3>
-          <p>A paper planner, a notebook and a to-do list you can hold.</p>
-          <button class="add" type="button" data-goal="task-analog" data-pillar="mental" data-label="Paper & analog planning">+ Add to my check-in</button>
+          <h3>Plan tomorrow tonight</h3>
+          <p>Five minutes before bed: what’s due, where you need to be and your top three tasks.</p>
+          <button class="add" type="button" data-goal="task-plan" data-pillar="mental" data-label="Plan tomorrow tonight">+ Add to my check-in</button>
         </div>
         <div class="lockin-item">
-          <h3>Content blockers on everything</h3>
-          <p>Phone, laptop and browser. Make the bad option annoying.</p>
-          <button class="add" type="button" data-goal="task-block" data-pillar="mental" data-label="Content blockers on">+ Add to my check-in</button>
+          <h3>One calendar for everything</h3>
+          <p>Classes, deadlines, shifts and plans, all in one place you actually check.</p>
+          <button class="add" type="button" data-goal="task-calendar" data-pillar="mental" data-label="One calendar for everything">+ Add to my check-in</button>
         </div>
         <div class="lockin-item">
-          <h3>Timers</h3>
-          <p>Work 25 minutes, then take a 5-minute break. Use the timer on this page.</p>
-          <button class="add" type="button" data-goal="task-timers" data-pillar="mental" data-label="Work in timed blocks">+ Add to my check-in</button>
+          <h3>Notifications off</h3>
+          <p>Do Not Disturb on while you study. Check messages on breaks.</p>
+          <button class="add" type="button" data-goal="task-notifs" data-pillar="mental" data-label="Notifications off while studying">+ Add to my check-in</button>
         </div>
         <div class="lockin-item">
-          <h3>Show up, fully present</h3>
-          <p>Go to every class and be fully immersed in the lecture. Notes only, no tabs.</p>
-          <button class="add" type="button" data-goal="task-class" data-pillar="mental" data-label="Show up to class, fully present">+ Add to my check-in</button>
+          <h3>Start early</h3>
+          <p>Do the first 20 minutes of a big assignment the day you get it.</p>
+          <button class="add" type="button" data-goal="task-early" data-pillar="mental" data-label="Start assignments early">+ Add to my check-in</button>
         </div>
         <div class="lockin-item">
-          <h3>AI is a tool, not a cheat code</h3>
-          <p>Let it explain things and quiz you. Don’t let it do the work for you.</p>
-          <button class="add" type="button" data-goal="task-ai" data-pillar="mental" data-label="Use AI as a tool, not for cheating">+ Add to my check-in</button>
-        </div>
-        <div class="lockin-item">
-          <h3>Texts, calendar, homework</h3>
-          <p>Answer texts in batches, live by the calendar and block real homework time.</p>
-          <button class="add" type="button" data-goal="task-batch" data-pillar="mental" data-label="Batch texts & block homework time">+ Add to my check-in</button>
+          <h3>Hardest thing first</h3>
+          <p>Tackle the task you’re dreading while your energy is highest.</p>
+          <button class="add" type="button" data-goal="task-hardest" data-pillar="mental" data-label="Hardest task first">+ Add to my check-in</button>
         </div>
       </div>
       <p class="label">Pro tips</p>
@@ -202,5 +198,7 @@
 </footer>
 
 <script src="app.js"></script>
+<script src="firebase-config.js"></script>
+<script src="account.js"></script>
 </body>
 </html>

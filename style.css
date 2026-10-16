@@ -188,6 +188,25 @@ body::before {
   border-radius: 999px;
   white-space: nowrap;
 }
+.nav-account {
+  font-family: var(--body);
+  font-weight: 800;
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  background: transparent;
+  color: var(--maroon);
+  border: 2px solid var(--maroon);
+  padding: 0.65em 1.4em;
+  border-radius: 999px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.nav-account.signed-in { border-color: var(--teal); color: var(--teal); }
+@media (max-width: 440px) {
+  .site-header .logo span { display: none; }
+  .nav-account { padding: 0.6em 1em; font-size: 0.68rem; }
+}
 .nav-toggle {
   display: none;
   background: none;
@@ -728,6 +747,30 @@ body::before {
 .share-dialog img { width: 100%; max-height: 62vh; object-fit: contain; background: var(--cream); }
 .share-dialog p { font-size: .85rem; }
 .share-dialog .btn--ghost { color: var(--maroon); }
+
+/* ---------- accounts ---------- */
+.sync-note { font-size: .88rem; font-weight: 700; color: var(--teal); }
+.acct-link { background: none; border: 0; padding: 0; font: inherit; font-weight: 800; color: inherit; text-decoration: underline; cursor: pointer; }
+.account-dialog { border: 0; padding: 28px 24px 24px; width: min(420px, calc(100vw - 32px)); max-height: calc(100vh - 32px); overflow: auto; background: var(--white); color: var(--maroon); display: none; }
+.account-dialog[open] { display: grid; gap: 12px; }
+.account-dialog::backdrop { background: rgba(42, 18, 16, .7); }
+.account-dialog .acct-out, .account-dialog .acct-in { display: grid; gap: 12px; }
+.account-dialog [hidden] { display: none !important; }
+.account-dialog .label { color: var(--coral); font-size: .72rem; }
+.account-dialog h3 { font-size: 1.9rem; }
+.account-dialog p { font-size: .92rem; }
+.acct-google { width: 100%; }
+.acct-or { text-align: center; font-size: .75rem !important; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; opacity: .6; }
+.acct-form { display: grid; gap: 8px; }
+.acct-form label { font-size: .72rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+.acct-form input { font: inherit; padding: 10px 12px; border: 2px solid var(--maroon); border-radius: 0; color: var(--maroon); background: var(--white); min-width: 0; }
+.acct-form .btn-row { margin-top: 6px; }
+.acct-form .btn--ghost, .account-dialog .btn--ghost { color: var(--maroon); }
+.acct-forgot { justify-self: start; font-size: .82rem; }
+.acct-small { font-size: .8rem !important; opacity: .75; }
+.acct-msg { font-weight: 700; color: var(--coral-ray); min-height: 1.2em; }
+.acct-msg:empty { display: none; }
+.acct-close { position: absolute; top: 8px; right: 10px; background: none; border: 0; font-size: 1.8rem; line-height: 1; color: var(--maroon); cursor: pointer; padding: 4px 8px; }
 
 /* ---------- reading table ---------- */
 .table-wrap { overflow-x: auto; background: var(--white); color: var(--ink); }
